@@ -40,8 +40,8 @@ String expensetype=addExpenseForm.getExpensetype();
 		//DataSource datasource=getDataSource(request,"FER _STRUTS");
 		Connection connection=getDataSource(request,"FER _STRUTS").getConnection();
 		boolean addExpense = ferService.addExpense(expense);
-
-		if (addExpense) {
+System.out.println("hi this ramesh");
+if (addExpense) {
 			return mapping.findForward("success");
 		} else {
 			return mapping.findForward("failure");
