@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+	<global>
+
+	</global>
+
+	<formset>
+
+		<form name="DynaValidatorForm">
+			<field property="username" depends="required">
+				<arg key="LoginForm.username" />
+			</field>
+			<field property="password" depends="required,mask">
+				<arg key="LoginForm.password" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]*$</var-value>
+				</var>
+			</field>
+		</form>
+
+	</formset>
+
+
+</form-validation>
