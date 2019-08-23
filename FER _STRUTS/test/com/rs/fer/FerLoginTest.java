@@ -40,7 +40,7 @@ public class FerLoginTest extends TestCase {
 			DBUtil.closeConnection(connection);
 		}
 
-		assertEquals(true, isValidUser);
+		assertEquals(false, isValidUser);
 	}
 
 }
